@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutSwipeRefreshMyFiles"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="VectorDrawableCompat">
+
+        <!-- Upload Slide Down -->
+        <!--<LinearLayout
+            android:id="@+id/progressLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:animateLayoutChanges="true">
+            <ProgressBar
+                android:id="@+id/uploadProgressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="20"/>
+            <TextView
+                android:id="@+id/txtUploadTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_in_progress"
+                android:layout_gravity="center_horizontal"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/txtPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/of_100_percent"
+                    android:layout_toRightOf="@id/txtPercentage"/>
+
+            </RelativeLayout>
+        </LinearLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/relLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:id="@+id/txtNoFilesSaved"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/no_files_available"
+                android:layout_marginTop="-60dp"
+                android:gravity="center"
+                android:visibility="visible"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvMyFiles"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:paddingBottom="30dp"/>
+
+            <!-- Floating action buttons -->
+            <!-- Icons are set programmatically in the MyFilesFragment.java because of compatibility
+                 reasons: Older devices do not support vector drawables in XML -->
+            <!-- Buttons for sharing -->
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fabMenuPublic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                fab:menu_colorNormal="@color/colorAccent"
+                fab:menu_colorPressed="@color/accent_pressed"
+                fab:menu_fab_size="normal"
+                fab:menu_labels_style="@style/menu_labels_style"
+                android:layout_marginBottom="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnContactPublic"
+                    fab:fab_label="Contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnDocumentPublic"
+                    fab:fab_label="Document"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnVideoPublic"
+                    fab:fab_label="Video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnPhotoPublic"
+                    fab:fab_label="Photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnSelectPublic"
+                    fab:fab_label="Select a file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+            </com.github.clans.fab.FloatingActionMenu>
+
+            <!-- Buttons for private storage -->
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fabMenuPrivate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                fab:menu_colorNormal="@color/colorAccent"
+                fab:menu_colorPressed="@color/accent_pressed"
+                fab:menu_fab_size="normal"
+                fab:menu_labels_style="@style/menu_labels_style"
+                fab:menu_labels_position="right"
+                android:layout_marginBottom="32dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnContactPrivate"
+                    fab:fab_label="Contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnDocumentPrivate"
+                    fab:fab_label="Document"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnVideoPrivate"
+                    fab:fab_label="Video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnPhotoPrivate"
+                    fab:fab_label="Photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/btnSelectPrivate"
+                    fab:fab_label="Select a file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/white"
+                    fab:fab_colorPressed="@color/white_pressed"
+                    fab:fab_size="mini"/>
+
+            </com.github.clans.fab.FloatingActionMenu>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

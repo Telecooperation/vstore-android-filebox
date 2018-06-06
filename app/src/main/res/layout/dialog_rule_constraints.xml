@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtNetworkRuleInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rule_constraints_info"/>
+
+        <!-- Constraints for node bandwidth -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/txtBandwidthCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bandwidth_constraint"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"/>
+            <CheckBox
+                android:id="@+id/checkboxBandwidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutBandwidth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:paddingLeft="10dp">
+            <TextView
+                android:id="@+id/txtBandwidthDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bandwidth_down"/>
+            <EditText
+                android:id="@+id/inputBandwidthDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtBandwidthDown"
+                android:layout_marginTop="-5dp"
+                android:inputType="number"/>
+
+            <TextView
+                android:id="@+id/txtBandwidthUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bandwidth_up"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/inputBandwidthDown"/>
+            <EditText
+                android:id="@+id/inputBandwidthUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtBandwidthUp"
+                android:layout_marginTop="-5dp"
+                android:inputType="number"/>
+        </RelativeLayout>
+
+        <!-- Constraints for upload duration -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/txtUploadDurationCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_duration_constraint"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"/>
+            <CheckBox
+                android:id="@+id/checkboxUploadDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutUploadDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:paddingLeft="10dp">
+            <TextView
+                android:id="@+id/txtUploadDurationInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_duration_constraint_text"/>
+            <EditText
+                android:id="@+id/inputUploadDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtUploadDurationInfo"
+                android:layout_marginTop="-5dp"
+                android:inputType="number"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

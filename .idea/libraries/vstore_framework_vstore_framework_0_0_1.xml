@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="vstore-framework.vstore-framework-0.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/vstore-framework/build/libs/vstore-framework-0.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

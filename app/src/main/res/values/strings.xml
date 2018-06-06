@@ -1,0 +1,269 @@
+<resources>
+    <string name="vstore_commstate_channel">vstore_commstate_channel</string>
+    <string name="Communication_State">Communication State</string>
+    <string name="notify_channel_descr">"Notifies about the up- and download states."</string>
+
+    <string name="app_name">vStore Filebox</string>
+    <string name="app_name_short">vStore</string>
+    <string name="vstore">vStore</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_rules">Matching Rules</string>
+    <string name="action_filter">Filter</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="file_not_found">Error: Store failed. File not found!</string>
+
+    <string name="not_working_without_vstore">This app cannot function without the vStore Framework.\n
+        To function properly, the framework needs location permissions.\n
+        Please give permissions to access your fine location by clicking the button below.\n\n
+    After you have granted the permissions, the app will be restarted.</string>
+    <string name="need_aware">To function properly, the vStore Framework needs the application "AWARE Framework" and the three plugins:\n\n
+    AWARE Google Fused Location\nAWARE Activity Recognition\nAWARE Ambient Noise\n\n
+        Please click on the following icons to install the missing software.</string>
+
+    <!-- Strings for Context Fragment -->
+    <string name="refresh">Refresh</string>
+    <string name="no_data">No Data</string>
+    <string name="menu_context">Current Context</string>
+    <string name="menu_my_files">My Files</string>
+    <string name="menu_search">Contextual Files</string>
+    <string name="title_location">Location</string>
+    <string name="title_current_address">Current address:</string>
+    <string name="title_current_latlong">Latitude/Longitude:</string>
+    <string name="title_time_fix">Time of fix:</string>
+    <string name="title_places">Nearby</string>
+    <string name="no_places">No places available.</string>
+    <string name="likelihood_colon">Likelihood:</string>
+    <string name="type_colon">Type:</string>
+    <string name="activity_history">Activity</string>
+    <string name="activity_walking">Walking</string>
+    <string name="activity_still">Still</string>
+    <string name="activity_driving">Driving</string>
+    <string name="activity_biking">Biking</string>
+    <string name="activity_unknown">Unknown</string>
+    <string name="activity_no_activity_available">No activity context available.</string>
+    <string name="network">Network</string>
+    <string name="noise">Noise</string>
+    <string name="noise_level_db">Noise level</string>
+    <string name="noise_level_rms">RMS</string>
+    <string name="noise_considered_silent">Is silent?</string>
+    <string name="wifi">WiFi</string>
+    <string name="no_wifi">No WiFi</string>
+    <string name="mobile_connected">Connected</string>
+    <string name="mobile_not_connected">Not connected</string>
+
+
+    <!-- Strings for Files Fragment-->
+    <string name="action_only_private">Only private files</string>
+    <string name="action_only_public">Only public files</string>
+    <string name="action_ascending">Oldest first</string>
+    <string name="action_descending">Newest first</string>
+    <string name="action_only_pending">Show only pending uploads</string>
+    <string name="pending_uploads">Pending Uploads</string>
+    <string name="no_uploads_pending">No uploads pending!</string>
+    <string name="no_files_available">No files saved yet!</string>
+    <string name="upload_in_progress">Upload in progress...</string>
+    <string name="all_uploads_done">All uploads done!</string>
+    <string name="of_100_percent"> / 100%</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="delete_file_ask">Are you sure you want to delete the selected file from vStore?</string>
+    <string name="file_deleted">File deleted!</string>
+
+    <!-- Strings for rules activity -->
+    <string name="rule_file_types">File types</string>
+    <string name="rule_context">Context</string>
+    <string name="no_rules">No matching rules created yet.\nPress "+" to get started!</string>
+    <string name="edit_rule">Edit matching rule</string>
+    <string name="create_new_rule">New matching rule</string>
+    <string name="please_enter_name">Please enter a name before saving the rule!</string>
+    <string name="title_rule_name">Name</string>
+    <string name="txtTitleRuleSharingDomain">Sharing domain(s) this rule should match</string>
+    <string name="domain_public">Public</string>
+    <string name="domain_private">Private</string>
+    <string name="txtTitleRuleWeekdays">Weekdays</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thur">Thur</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+    <string name="txtTitleRuleTimeStart">Start time</string>
+    <string name="start">Start:</string>
+    <string name="txtTitleRuleTimeEnd">End time</string>
+    <string name="end">End:</string>
+    <string name="title_rule_file_types">File type triggers</string>
+    <string name="title_rule_min_file_size">File size</string>
+    <string name="title_rule_context">Context triggers</string>
+    <string name="no_mimes_selected">No MIME types selected yet!</string>
+    <string name="rule_no_mime_triggers">No MIME triggers.</string>
+    <string name="title_select_mime">Select MIME types</string>
+    <string name="mime_types_updated">MIME types updated.</string>
+    <string name="title_context_select_dialog">Please select the context type you want to add to the rule:</string>
+    <string name="context_all_selected">You have already configured all context triggers for this rule!</string>
+    <string name="rule_no_context_triggers">No context triggers.</string>
+    <string name="rule_no_context_configured">No context triggers configured!</string>
+    <string name="rule_added_new">Added new rule.</string>
+    <string name="rule_updated">Rule updated.</string>
+    <string name="delete_rule_ask">Do you really want to delete this rule?</string>
+
+    <string name="title_configure_context_location">Configure location context</string>
+    <string name="long_press_info">Please long press on the map to set the desired location.</string>
+    <string name="set_radius_meters">Set a radius in meters:</string>
+    <string name="location_context_updated">Location context updated.</string>
+    <string name="error_location_data">Error in location data.</string>
+    <string name="location_context_deleted">Location context deleted!</string>
+
+    <string name="title_configure_context_placetypes">Configure place types</string>
+    <string name="place_context_updated">Place type context updated.</string>
+    <string name="place_context_deleted">Place context deleted!</string>
+
+    <string name="title_configure_context_activity">Select an activity</string>
+    <string name="activity_context_updated">Activity context updated.</string>
+    <string name="activity_context_deleted">Activity context deleted!</string>
+
+    <string name="title_configure_context_network">Configure network context</string>
+    <string name="network_rule_info">Please configure the desired network context for this rule.</string>
+    <string name="info_should_wifi">Should WiFi be connected?</string>
+    <string name="info_wifi_ssid">WiFi SSID (\'%\' matches any WiFi):</string>
+    <string name="info_should_mobile">Should mobile be connected?</string>
+    <string name="info_should_mobile_fast">Should mobile be fast (e.g. 3G, 4G)?</string>
+    <string name="network_context_updated">Network context updated.</string>
+    <string name="network_context_deleted">Network context deleted!</string>
+
+    <string name="title_configure_context_noise">Configure noise context</string>
+    <string name="info_noise_configure">Please set the threshold for the noise value for this rule.
+        Enter 1 if the value should be ignored for the rule.</string>
+    <string name="info_rms_threshold_value">RMS threshold value:</string>
+    <string name="info_db_threshold_value">dB threshold value \n(-90dB=lowest to 0dB=loudest):</string>
+    <string name="noise_context_updated">Noise context updated.</string>
+    <string name="noise_context_deleted">Noise context deleted!</string>
+
+    <string name="title_rule_decision">Decision</string>
+    <string name="rule_no_decision">No decision layers configured!</string>
+    <string name="title_rule_decision_select">Select the target node type</string>
+
+    <string name="title_rule_constraints">Node Constraints</string>
+    <string name="rule_no_constraints">No constraints configured yet!</string>
+
+    <string name="title_rule_score">Detail score</string>
+
+    <string name="rule_deleted">Rule deleted!</string>
+    <string name="admin_rules_not_edit">Rules created by the admin cannot be edited.</string>
+    <string name="admin_rules_not_delete">Rules created by the admin cannot be deleted.</string>
+
+    <string name="bandwidth_text">Min. Node Bandwidth \n      Down: %1$d MBit/s\n      Up: %2$d MBit/s</string>
+    <string name="max_upload_time">Upload duration: %1$d s</string>
+
+    <string name="rule_constraints_info">Here you can configure constraints that a target node must match to be chosen.</string>
+    <string name="bandwidth_constraint">Add bandwidth constraint</string>
+    <string name="bandwidth_up">Minimum upstream:</string>
+    <string name="bandwidth_down">Minimum downstream:</string>
+    <string name="upload_duration_constraint">Add upload duration constraint</string>
+    <string name="upload_duration_constraint_text">How long should a download take in seconds (maximum)?</string>
+    <string name="constraints_updated">Node constraints updated.</string>
+    <string name="constraints_deleted">Node constraints deleted!</string>
+    <string name="invalid_downstream">Invalid value entered for downstream bandwidth!</string>
+    <string name="invalid_upstream">Invalid value entered for upstream bandwidth!</string>
+    <string name="invalid_duration">Invalid value entered for max upload duration!</string>
+
+    <string name="title_decision">Decision Layers</string>
+    <string name="rule_decision_info">Here you can configure multiple decision layers that will be tried one after another.</string>
+    <string name="decision_no_layers_yet">No decision layers configured yet.</string>
+    <string name="confirm_row_first">Confirm the current row first.</string>
+    <string name="wrong_values_entered">Wrong number format!</string>
+    <string name="select_specific_node">Specific node</string>
+    <string name="enter_params">Parameters</string>
+    <string name="hint_last_is_specific">Cannot add new layer. Last one is already specific.</string>
+
+
+    <!-- Strings for Contextual files fragment -->
+    <string name="download">Download</string>
+    <string name="search_start_info">To start fetching files matching your current usage context, press the refresh button at the top right.</string>
+    <string name="search_no_files">No files were found for your current usage context.\nBe the first to upload one!\nAlternatively, try to reconfigure the filter.</string>
+    <string name="search_load_files">Start loading files</string>
+    <string name="what_to_do">What do you want to do?</string>
+    <string name="metadata">Show Metadata</string>
+    <string name="delete_file">Delete file</string>
+    <string name="request_not_started">Request was not started. Maybe no storage nodes are configured?</string>
+    <string name="requesting_files">Downloading&#8230;</string> <!-- &8230; = ... -->
+
+    <string name="file_metadata">File information</string>
+    <string name="filename">Filename:</string>
+    <string name="filesize">Filesize:</string>
+    <string name="mimetype">MIME type:</string>
+    <string name="creation_date">Created at:</string>
+    <string name="node_type">Node type:</string>
+    <string name="show_qr_code">Create QR-Code</string>
+    <string name="download_button_info">If you click the Download button, the file will be saved to the Download folder on your SD card.</string>
+
+    <string name="could_not_start_download">Download could not be started!</string>
+
+    <string name="title_filter">Configure the Context Filter</string>
+    <string name="filter_info">The filter will be applied to your current usage context and show you relevant files. If you activate too many filter options, you might not get any results.</string>
+    <string name="enable_location">Enable Location Context Filter</string>
+    <string name="enable_place">Enable Most Likely Place Filter</string>
+    <string name="enable_activity">Enable Activity Context Filter</string>
+    <string name="enable_network">Enable Network Context Filter</string>
+    <string name="enable_noise">Enable Noise Context Filter</string>
+    <string name="enable_weekday">Enable Day of Week Filter</string>
+    <string name="enable_timeofday">Enable Time Of Day Filter</string>
+    <string name="reset_filter">Reset filter to default</string>
+
+
+    <!-- Strings that were previously in the framework library -->
+    <string name="please_give_permissions">Cannot start VStore Framework because required permissions are not given yet.</string>
+
+    <string name="make_sure_aware">Please make sure AWARE is enabled!</string>
+
+    <string name="upload_notification_title">vStore Framework</string>
+    <string name="uploading_file">Upload in progress</string>
+    <string name="upload_completed">Upload completed.</string>
+    <string name="error_uploading">Upload failed.</string>
+
+    <!-- Strings for Config Activity -->
+    <string name="device_identifier">This device:</string>
+    <string name="btn_scan_qr">Scan QR code</string>
+    <string name="config_info">Here you can configure the settings for the vStore Framework.</string>
+    <string name="btn_reload_config">Reload configuration</string>
+    <string name="btn_add_nodes_text">Add new Storage Node</string>
+    <string name="btn_configure_nodes_text">Configure storage nodes</string>
+    <string name="edit">Edit</string>
+    <string name="ok">Okay</string>
+    <string name="node_ask_delete">Do you really want to delete the node?</string>
+    <string name="node_has_deleted">The node has been deleted!</string>
+    <string name="no_nodes_available">No nodes available! Click the button above to add a new one.</string>
+
+    <string name="edit_node">Edit node configuration</string>
+    <string name="create_new_node">Add a new storage node</string>
+    <string name="node_id">Node ID</string>
+    <string name="node_address">Address</string>
+    <string name="node_port">Port</string>
+    <string name="node_location">Location</string>
+    <string name="node_added_new">Node has been added!</string>
+    <string name="node_config_updated">Node has been updated!</string>
+    <string name="failed_contact_node">Failed to contact node. Make sure that the data is correct!</string>
+    <string name="select_node_location">Select node location</string>
+    <string name="no_location_selected">No location selected.</string>
+
+    <string name="btn_delete_current_context">Delete current context</string>
+    <string name="ask_delete_context">Do you really want to delete the current usage context?</string>
+    <string name="context_deleted">Current context deleted.</string>
+
+    <string name="other_settings">Other settings</string>
+
+    <string name="default_db_threshold">Default dB Threshold</string>
+    <string name="default_db_threshold_explanation">This threshold value will be used as a default value to classify if it is silent or loud (-90dB=lowest to 0dB=loudest).</string>
+
+    <string name="context_refresh_time">Context refresh interval</string>
+    <string name="context_refresh_time_explanation">This value determines, how often AWARE should try to fetch new context (in seconds).\n(experimental!)</string>
+
+
+    <string name="enable_select_multiple_nodes_title">Multiple nodes per rule</string>
+    <string name="enable_select_multiple_nodes">Allow multiple storage nodes per rule.</string>
+
+</resources>

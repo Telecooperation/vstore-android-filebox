@@ -1,0 +1,125 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:padding="40dp">
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_launcher" />
+
+    <!--<TextView
+        android:id="@+id/txtInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/not_working_without_vstore"/>-->
+
+    <TextView
+        android:id="@+id/txtInfo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/need_aware"/>
+
+    <!--<Button
+        android:id="@+id/btnRequestPermissions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Request permissions"
+        android:layout_marginTop="20dp"/>-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp">
+            <ImageView
+                android:id="@+id/imgAware"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/aware"/>
+            <ImageView
+                android:id="@+id/imgAwareTick"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:src="@mipmap/tick_green"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp">
+            <ImageView
+                android:id="@+id/imgAwareLoc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/aware_loc"/>
+            <ImageView
+                android:id="@+id/imgAwareLocTick"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:src="@mipmap/tick_green"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp">
+            <ImageView
+                android:id="@+id/imgAwareAct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/aware_act"/>
+            <ImageView
+                android:id="@+id/imgAwareActTick"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:src="@mipmap/tick_green"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp">
+            <ImageView
+                android:id="@+id/imgAwareNoise"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/aware_noise"/>
+            <ImageView
+                android:id="@+id/imgAwareNoiseTick"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:src="@mipmap/tick_green"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

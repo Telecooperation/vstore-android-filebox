@@ -1,0 +1,15 @@
+<tabs>
+
+    <tab id="@+id/tab_current_context"
+        icon="@drawable/ic_context_black_24dp"
+        title="@string/menu_context"/>
+
+    <tab id="@+id/tab_my_files"
+        icon="@drawable/ic_folder_black_24dp"
+        title="@string/menu_my_files"/>
+
+    <tab id="@+id/tab_filter"
+        icon="@drawable/ic_search_black_24dp"
+        title="@string/menu_search"/>
+
+</tabs>

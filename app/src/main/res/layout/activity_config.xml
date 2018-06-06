@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="vstore.android_filebox.config_activity.ConfigActivity"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/config_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:titleTextColor="@color/white"/>
+
+    <ScrollView
+        android:id="@+id/scrollConfig"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/devIdent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:text="@string/device_identifier"/>
+            <TextView
+                android:id="@+id/txtDeviceIdentifier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_below="@id/devIdent"/>
+
+            <Button
+                android:id="@+id/btnScanQR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btn_scan_qr"
+                android:layout_below="@id/txtDeviceIdentifier" />
+
+            <TextView
+                android:id="@+id/config_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/btnScanQR"
+                android:text="@string/config_info"/>
+
+            <Button
+                android:id="@+id/btnReloadConfig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btn_reload_config"
+                android:layout_below="@id/config_info"/>
+            <Button
+                android:id="@+id/btnAddStorageNode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btn_add_nodes_text"
+                android:layout_below="@id/btnReloadConfig"/>
+            <Button
+                android:id="@+id/btnConfigureNodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btn_configure_nodes_text"
+                android:layout_below="@id/btnAddStorageNode"/>
+
+            <ListView
+                android:id="@+id/listviewNodeList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/btnConfigureNodes">
+
+            </ListView>
+
+            <Button
+                android:id="@+id/btnDeleteCurrentContext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btn_delete_current_context"
+                android:layout_below="@id/listviewNodeList"/>
+
+            <!-- Other settings -->
+            <TextView
+                android:id="@+id/txtOtherSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/other_settings"
+                android:layout_below="@id/btnDeleteCurrentContext"/>
+
+            <LinearLayout
+                android:id="@+id/layoutMultipleNodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtOtherSettings"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="3">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="@string/enable_select_multiple_nodes_title"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/enable_select_multiple_nodes" />
+                    </LinearLayout>
+                    <Switch
+                        android:id="@+id/switchMultipleNodes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+                <View style="@style/divider"/>
+            </LinearLayout>
+
+            <!-- db threshold -->
+            <LinearLayout
+                android:id="@+id/layoutDb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/layoutMultipleNodes">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="3">
+                        <TextView
+                            android:id="@+id/txtDbInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="@string/default_db_threshold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/default_db_threshold_explanation" />
+                    </LinearLayout>
+                    <EditText
+                        android:id="@+id/inputDefaultDBThreshold"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number|numberSigned"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+                <View style="@style/divider"/>
+            </LinearLayout>
+
+            <!-- AWARE Context Plugin refresh time -->
+            <LinearLayout
+                android:id="@+id/layoutRefreshTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/layoutDb">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="3">
+                        <TextView
+                            android:id="@+id/txtRefreshTimeInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="@string/context_refresh_time"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/context_refresh_time_explanation" />
+                    </LinearLayout>
+                    <EditText
+                        android:id="@+id/inputRefreshTime"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+                <View style="@style/divider"/>
+            </LinearLayout>
+
+            <!-- Used libraries -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/layoutRefreshTime">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Libraries used in the framework:"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Greenrobot Eventbus\n  License: Apache 2.0  \n  (C) 2012-2016 Markus Junginger, greenrobot \n  http://greenrobot.org"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MD5 Hash Code\n  License: GNU GPLv2  \n  (C) 2012 The CyanogenMod Project  \n" />
+
+                <!-- Libraries used in the demo app -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="30dp"
+                    android:text="Additional libraries used in the demo app:"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BottomBar library for Android\n  License: Apache 2.0  \n  (C) 2016 Iiro Krankka  \n  http://github.com/roughike"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clans FloatingActionButton\n  License: Apache 2.0  \n  (C) 2015 Dmytro Tarianyk  \n  https://github.com/Clans/FloatingActionButton"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ActionItemBadge\n  License: Apache 2.0  \n  (C) 2016 Mike Penz  \n  https://github.com/mikepenz/Android-ActionItemBadge"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Android Iconics\n  License: Apache 2.0  \n  (C) 2016 Mike Penz\n  https://github.com/mikepenz/Android-Iconics"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>

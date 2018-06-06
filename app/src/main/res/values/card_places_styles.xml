@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="card_places_place">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="card_places_place_subtitle1">
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/subtext_color</item>
+    </style>
+    <style name="card_places_place_subtitle2">
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_marginTop">-2dp</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/subtext_color</item>
+    </style>
+</resources>

@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:paddingBottom="60dp"
+    android:background="@color/white">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/layoutSwipeRefreshContext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/context_mainScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                    <!-- Location card -->
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cardView_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_margin="10dp"
+                        card_view:cardCornerRadius="0dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:id="@+id/cardLocationTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/imgLocTitle"
+                                    style="@style/card_title_img"
+                                    card_view:srcCompat="@drawable/ic_places_black_24dp"/>
+                                <TextView
+                                    android:id="@+id/txtTitleLoc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/card_title"
+                                    android:text="@string/title_location"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/cardLocContent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_below="@id/cardLocationTitle">
+
+                                <vstore.android_filebox.context_fragment.CustomMapView
+                                    android:id="@+id/mapView_currentLocation"
+                                    android:layout_width="150dp"
+                                    android:layout_height="180dp" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="10dp">
+                                    <!-- Show address -->
+                                    <TextView
+                                        android:id="@+id/txtCurAddrTitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="@string/title_current_address"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txtAddress"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/txtCurAddrTitle"
+                                        android:textSize="11dp"
+                                        android:layout_marginTop="0dp"
+                                        android:text="" />
+
+                                    <!-- Show LatLong -->
+                                    <TextView
+                                        android:id="@+id/txtCurLatLongTitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/txtAddress"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/title_current_latlong"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txtCurLatLong"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/txtCurLatLongTitle"
+                                        android:layout_marginTop="0dp"
+                                        android:textSize="11dp"
+                                        android:text="" />
+
+                                    <!-- Show Time of fix -->
+                                    <TextView
+                                        android:id="@+id/txtTimeOfFixTitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/txtCurLatLong"
+                                        android:layout_marginTop="10dp"
+                                        android:text="@string/title_time_fix"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/txtTimeOfFix"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/txtTimeOfFixTitle"
+                                        android:layout_marginTop="0dp"
+                                        android:textSize="11dp"
+                                        android:text="" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <!-- Nearby Places Card -->
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cardView_places"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        card_view:cardCornerRadius="0dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:id="@+id/cardPlacesTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/imgPlacesTitle"
+                                    style="@style/card_title_img"
+                                    card_view:srcCompat="@drawable/ic_location_on_black_24dp"/>
+                                <TextView
+                                    android:id="@+id/txtTitlePlaces"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    style="@style/card_title"
+                                    android:text="@string/title_places"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/cardPlacesContent"
+                                android:layout_width="match_parent"
+                                android:layout_height="210dp"
+                                android:orientation="vertical"
+                                android:layout_below="@id/cardPlacesTitle"
+                                android:paddingLeft="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingRight="5dp">
+                                <ScrollView
+                                    android:id="@+id/placesListScrollView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/txtTitlePlaces"
+                                    android:requiresFadingEdge="vertical"
+                                    android:fadingEdgeLength="20dp"
+                                    android:scrollbarSize="2dp">
+                                    <LinearLayout
+                                        android:id="@+id/cardPlacesList"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                    </LinearLayout>
+                                </ScrollView>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <!-- Current Network card -->
+                    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/cardView_currentNet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        card_view:cardCornerRadius="0dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/cardNetworkTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageView
+                                    android:id="@+id/imgNetTitle"
+                                    card_view:srcCompat="@drawable/ic_network_black_24dp"
+                                    style="@style/card_title_img"/>
+                                <TextView
+                                    android:id="@+id/txtNetTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/network"
+                                    style="@style/card_title"/>
+                                <TextView
+                                    android:id="@+id/txtNetShort"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginLeft="4dp"
+                                    android:gravity="center_vertical"
+                                    android:text=""/>
+                            </LinearLayout>
+
+                            <!-- Content layout for the network card -->
+                            <RelativeLayout
+                                android:id="@+id/cardNetworkContent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                                <LinearLayout
+                                    android:id="@+id/wifi_element"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:gravity="center">
+                                    <ImageView
+                                        android:id="@+id/imgWifiVal"
+                                        android:layout_width="32dp"
+                                        android:layout_height="32dp"
+                                        android:layout_gravity="center"/>
+                                    <TextView
+                                        android:id="@+id/txtWifiSsid"
+                                        android:textSize="12sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/mobile_element"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:gravity="center"
+                                    android:layout_toEndOf="@id/wifi_element"
+                                    android:layout_toRightOf="@id/wifi_element">
+                                    <TextView
+                                        android:id="@+id/txtMobileVal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="32dp"
+                                        android:textSize="23sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/text_color"
+                                        android:gravity="center" />
+                                    <TextView
+                                        android:id="@+id/txtMobileNet"
+                                        android:textSize="12sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Activity card -->
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cardView_activity"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.45"
+                            android:layout_height="150dp"
+                            android:layout_margin="8dp"
+                            card_view:cardCornerRadius="0dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:id="@+id/cardActivityTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:id="@+id/imgActivityTitle"
+                                        card_view:srcCompat="@drawable/ic_activity_black_24dp"
+                                        style="@style/card_title_img"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        style="@style/card_title"
+                                        android:text="@string/activity_history"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/cardActivityContent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                    <TextView
+                                        android:id="@+id/txtNoActivityContext"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:visibility="visible"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:text="@string/activity_no_activity_available"/>
+                                    <!-- ScrollView for scrolling through past activities -->
+                                    <!--<HorizontalScrollView
+                                        android:id="@+id/scrollActivityHistory"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:requiresFadingEdge="horizontal"
+                                        android:fadingEdgeLength="500dp"
+                                        android:scrollbarSize="2dp">-->
+                                    <LinearLayout
+                                        android:id="@+id/smallActivitiesContainer"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                    </LinearLayout>
+                                    <!--</HorizontalScrollView>-->
+                                </LinearLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+
+                        <!-- Current Environment Noise card -->
+                        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/cardView_currentNoise"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.45"
+                            android:layout_height="150dp"
+                            android:layout_margin="8dp"
+                            card_view:cardCornerRadius="0dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:id="@+id/cardNoiseTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <ImageView
+                                        android:id="@+id/imgNoiseTitle"
+                                        card_view:srcCompat="@drawable/ic_noise_black_24dp"
+                                        style="@style/card_title_img"/>
+                                    <TextView
+                                        android:id="@+id/txtTitleNoise"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/noise"
+                                        style="@style/card_title"/>
+                                    <TextView
+                                        android:id="@+id/txtNoiseShort"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginLeft="4dp"
+                                        android:gravity="center_vertical"
+                                        android:text=""/>
+                                </LinearLayout>
+
+                                <!-- Content layout for the noise card -->
+                                <LinearLayout
+                                    android:id="@+id/cardNoiseContent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="1dp"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+                                    <LinearLayout
+                                        android:id="@+id/db_element"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:layout_gravity="center">
+                                        <TextView
+                                            android:id="@+id/txtNoiseLvlDb"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/noise_level_db"
+                                            android:gravity="center"/>
+                                        <TextView
+                                            android:id="@+id/txtNoiseDbVal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="-2dp"
+                                            android:textSize="18sp"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/silent_element"
+                                        android:orientation="vertical"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center">
+                                        <TextView
+                                            android:id="@+id/txtNoiseSilent"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/noise_considered_silent"
+                                            android:gravity="center"/>
+                                        <TextView
+                                            android:id="@+id/txtNoiseSilentVal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="-2dp"
+                                            android:textSize="18sp"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

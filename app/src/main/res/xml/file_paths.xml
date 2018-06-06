@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="tmp_files" path="Android/data/vstore.android_filebox/cache/tmp_files"/>
+    <external-path name="vfiles" path="Android/data/vstore.android_filebox/files/vstore/vfiles/"/>
+    <external-path name="dlfiles" path="Android/data/vstore.android_filebox/files/vstore/dlfiles/"/>
+</paths>

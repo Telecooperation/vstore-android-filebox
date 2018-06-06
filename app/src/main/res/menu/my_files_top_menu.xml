@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_filter_white_24dp"
+        android:title="@string/action_filter"
+        app:showAsAction="always">
+        <menu>
+            <group android:id="@+id/menu_group_1"
+                android:checkableBehavior="single">
+                <item android:id="@+id/action_only_private"
+                    android:title="@string/action_only_private" />
+                <item android:id="@+id/action_only_public"
+                    android:title="@string/action_only_public" />
+            </group>
+            <group android:id="@+id/menu_group_2"
+                android:checkableBehavior="single">
+                <item android:id="@+id/action_ascending"
+                    android:title="@string/action_ascending" />
+                <item android:id="@+id/action_descending"
+                    android:title="@string/action_descending" />
+            </group>
+            <item android:id="@+id/action_only_pending"
+                android:title="@string/action_only_pending" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/item_pending"
+        app:actionLayout="@layout/menu_action_item_badge"
+        app:showAsAction="always"
+        android:title="@string/pending_uploads">
+    </item>
+
+</menu>
